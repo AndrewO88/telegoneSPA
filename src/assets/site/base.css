@@ -1,0 +1,332 @@
+@import "~normalize.css";
+@import "montserrat.css";
+
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.redirector {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #3f4452;
+    background: #f6f7fa;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+.form {
+    width: 450px;
+    background: #ffffff;
+    box-shadow: 0 0 150px 40px rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    text-align: center;
+    margin: 25px auto;
+}
+
+@media (max-width: 500px) {
+    .form {
+        width: 90%;
+    }
+}
+
+.form_image {
+    margin-top: 100px;
+}
+
+.form-controls {
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.form-controls:active {
+    cursor: pointer;
+}
+
+.block-a {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.form .tg-install {
+    margin-top: -10px;
+}
+
+.tg-install {
+    margin: 15px auto;
+    text-align: center;
+    color: #b3b3b3;
+}
+
+.form-fallback__image {
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    margin: -60px auto 20px auto;
+    position: relative;
+}
+
+.form-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-info {
+    font-size: 14px;
+    /*margin-bottom: 30px;*/
+}
+
+.form-controls__open {
+    width: 200px;
+    height: 40px;
+    background: #346bed;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: all 0.22s ease;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.form-controls__open:active {
+    cursor: pointer;
+}
+
+.form-controls__open:after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background: url('../images/i-button.svg') center no-repeat;
+    background-size: contain;
+}
+
+.tg-install__text {
+    font-size: 11px;
+}
+
+.tg-install__link_android {
+    background: url('../images/i-android.svg') center no-repeat;
+    background-size: 21px 25px;
+}
+
+.tg-install__link {
+    width: 42px;
+    height: 40px;
+    display: inline-block;
+}
+
+.tg-install__link_apple {
+    background: url('../images/i-apple.svg') center no-repeat;
+    background-size: 21px 25px;
+}
+
+.form-fallback__image:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #9bb9ff;
+    border: 5px solid #ffffff;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    -webkit-animation-name: pulsenormal;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: pulsenormal;
+    -moz-animation-duration: 1.5s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -o-animation-name: pulsenormal;
+    -o-animation-duration: 1.5s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-timing-function: linear;
+    animation-name: pulsenormal;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.form-fallback__image-src {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 1;
+    background: #346bed url('../images/i-button.svg') center no-repeat;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+    border: 5px solid #ffffff;
+    object-fit: cover;
+    background-size: 70px;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.7;
+        transform: scale(1)
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.7)
+    }
+}
+
+@-webkit-keyframes pulsenormal {
+    0% {
+        opacity: 0.7;
+        -webkit-transform: scale(1)
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(1.4)
+    }
+}
+
+@-moz-keyframes pulsenormal {
+    0% {
+        opacity: 0.7;
+        -moz-transform: scale(1)
+    }
+    100% {
+        opacity: 0;
+        -moz-transform: scale(1.4)
+    }
+}
+
+@-o-keyframes pulsenormal {
+    0% {
+        opacity: 0.7;
+        -o-transform: scale(1)
+    }
+    100% {
+        opacity: 0;
+        -o-transform: scale(1.4)
+    }
+}
+
+@keyframes pulsenormal {
+    0% {
+        opacity: 0.7;
+        transform: scale(1)
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.4)
+    }
+}
+
+.redirector .form .form-title {
+    font-family: 'Montserrat', sans-serif !important;
+    letter-spacing: normal;
+    margin: 0 0 16px;
+}
+
+.form-info {
+    font-size: 14px;
+}
+
+.form .tg-install {
+    margin-top: -10px;
+}
+
+.tg-install {
+    margin: 15px auto;
+    text-align: center;
+    color: #b3b3b3;
+}
+
+.tg-install__text {
+    font-size: 11px;
+}
+
+.tg-install__link_android {
+    background: url('../images/i-android.svg') center no-repeat;
+    background-size: 21px 25px;
+}
+
+.tg-install__link {
+    width: 42px;
+    height: 40px;
+    display: inline-block;
+}
+
+.tg-install__link_apple {
+    background: url('../images/i-apple.svg') center no-repeat;
+    background-size: 21px 25px;
+}
+
+.banner {
+    padding: 0 40px 40px;
+}
+
+video {
+    width: 100%;
+}
+
+
+.fadeIn {
+    animation: fadein 300ms;
+    -moz-animation: fadein 300ms; /* Firefox */
+    -webkit-animation: fadein 300ms; /* Safari and Chrome */
+    -o-animation: fadein 300ms; /* Opera */
+    /*display: none !important;*/
+}
+
+.hidden {
+    display: none !important;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
